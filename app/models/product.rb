@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
 
-	belongs_to :user
+	belongs_to :business
 
 	def read_price
 		if self.price

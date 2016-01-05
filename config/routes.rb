@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'dashboard' => 'dashboard#index'
+
   resources :businesses
   get 'owner' => 'businesses#owner'
   get 'admin' => 'admin#index'
