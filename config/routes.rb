@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+
+  get 'admin' => 'admin#index'
+
   resources :products
   devise_for :users
-  # get 'home/index'
   root 'home#index'
 
   get 'business' => "products#business"

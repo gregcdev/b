@@ -74,8 +74,8 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      if params[:product][:price]
-        params[:product][:price] = (params[:product][:price].to_f * 100).to_i
+      if params[:product][:read_price]
+        params[:product][:price] = (params[:product][:read_price].to_f * 100).to_i
       end
       params.require(:product).permit(:name, :description, :price)
     end
