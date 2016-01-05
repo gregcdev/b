@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :businesses
+  get 'owner' => 'businesses#owner'
   get 'admin' => 'admin#index'
 
   resources :products
   devise_for :users
   root 'home#index'
 
-  get 'business' => "products#business"
+  # get 'business' => "products#business"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
